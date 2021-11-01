@@ -1,5 +1,5 @@
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
+  slidesPerView: 2,
   spaceBetween: 16,
   mousewheel: false,
   allowTouchMove: false,
@@ -7,6 +7,9 @@ const swiper = new Swiper('.swiper', {
   speed: 1000,
   loop: true,
   breakpoints: {
+    540:{
+      slidesPerView: 3
+    },
     768: {
       slidesPerView: 2,
       setWrapperSize: true

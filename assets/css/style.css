@@ -285,7 +285,7 @@ ul.show-menu-mobile {
 }
 
 .menu-mobile li:first-child {
-  text-align: left;
+  text-align: right;
 }
 
 .menu-mobile a,
