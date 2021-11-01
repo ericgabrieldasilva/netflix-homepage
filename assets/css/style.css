@@ -1,0 +1,707 @@
+/*---------RESET----------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*---------VARIABLES----------------------------------*/
+:root {
+  --base-color: #52b2f7;
+  --base-color-second: #7b52f7;
+  --text-color: #ffffff;
+  --body-color: #000000;
+}
+
+/*---------SCROLLBAR-EDIT----------------------------------*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--body-color);
+  border: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--base-color);
+  border-radius: 0.15rem;
+}
+
+/*===== BASE ==========================*/
+body {
+  background-color: var(--body-color);
+  position: relative;
+  overflow: hidden;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+.container {
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+
+.btn {
+  padding: 0.5rem 1.5rem;
+  text-transform: unset;
+  background: none;
+  cursor: pointer;
+}
+
+/*--------LOADING--------------------------------*/
+.overlay-loading {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--body-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay-loading.overlay-hide {
+  transform-origin: bottom;
+  animation: overlayHide 0.5s linear forwards;
+}
+
+.overlay-loading img {
+  position: absolute;
+  width: 2rem;
+}
+
+.overlay-loading span {
+  height: 4rem;
+  width: 4rem;
+  border: 3px solid transparent;
+  border-radius: 50%;
+  border-top-color: var(--base-color);
+  animation: spinner 1s linear infinite;
+}
+
+.overlay-loading.overlay-hide img,
+.overlay-loading.overlay-hide span {
+  display: none;
+}
+
+@keyframes overlayHide {
+  to {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*--------HEADER--------------------------------*/
+header {
+  padding: 2rem 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+}
+
+header > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  width: 6.875rem;
+}
+
+/*--------MENU-LINKS--------------------------------*/
+.menu-links ul {
+  display: flex;
+  gap: 4rem;
+}
+
+.menu-links a {
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 1rem;
+  position: relative;
+  transition: 0.5s;
+}
+
+.menu-links a:hover,
+a.active {
+  opacity: 1;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu-links a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -0.5rem;
+  height: 2px;
+  width: 0;
+  transition: 0.5s;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+}
+
+.menu-links a:hover::before,
+a.active::before {
+  width: 100%;
+}
+
+a.active {
+  font-weight: 600;
+}
+
+/*--------MENU-LOGIN--------------------------------*/
+.menu-login ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+li.search {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+li.search input {
+  background: none;
+  border-bottom: 1px solid var(--text-color);
+  color: var(--text-color);
+  opacity: 0.6;
+  font-size: 1rem;
+  max-width: 12rem;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: 0.5s;
+  position: absolute;
+  left: -12rem;
+}
+
+#btn-search {
+  background: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.menu-login button {
+  color: var(--text-color);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.sign-up {
+  background-size: 100%;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+  transition: 0.5s;
+}
+
+.sign-up:hover {
+  background-size: 200%;
+}
+
+/*--------MENU-MOBILE--------------------------------*/
+.menu-mobile {
+  display: none;
+}
+
+.menu-mobile ul {
+  padding: 1rem;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+  max-width: 25rem;
+  width: 100%;
+  position: fixed;
+  right: 0;
+  top: -10rem;
+  height: 100%;
+  overflow: auto;
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  animation: hideMenuMobile 0.5s ease-in-out forwards;
+}
+
+ul.show-menu-mobile {
+  animation: showMenuMobile 0.5s ease-in-out forwards;
+}
+
+@keyframes showMenuMobile {
+  to {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes hideMenuMobile {
+  from {
+    top: 0;
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+.menu-mobile li {
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.menu-mobile li:first-child {
+  text-align: left;
+}
+
+.menu-mobile a,
+.menu-mobile .btn {
+  color: var(--text-color);
+  text-transform: uppercase;
+}
+
+.menu-mobile .btn {
+  font-size: 1rem;
+  background: none;
+  width: 100%;
+}
+
+.menu-mobile .icon-menu,
+.menu-mobile .icon-close {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/*--------MAIN--------------------------------*/
+main {
+  min-height: 45rem;
+  height: 100%;
+  position: relative;
+}
+
+.bg-home {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show {
+  visibility: visible;
+  opacity: 1;
+  top: -20rem;
+  opacity: 0;
+  animation: fadeInItem 1s ease-in-out forwards;
+}
+
+.overlay {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.8),
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay::before {
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.8),
+    transparent,
+    transparent,
+    transparent
+  );
+}
+
+.overlay::after {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), transparent);
+}
+
+main > .container {
+  display: flex;
+  height: 100%;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 4rem;
+  padding: 4rem 2%;
+}
+
+/*--------DESCRIPTION--------------------------------*/
+.description {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.description-single {
+  display: none;
+  max-width: 37.5rem;
+}
+
+.description-single:nth-of-type(1) {
+  display: block;
+}
+
+.description-single h1 {
+  color: var(--text-color);
+  font-size: 3rem;
+  font-weight: 300;
+  position: relative;
+  top: 4rem;
+  opacity: 0;
+  animation: fadeInItem 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 1s forwards;
+}
+
+.genre {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  top: -4rem;
+  opacity: 0;
+  animation: fadeInItemsWithOpacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 1s
+    forwards;
+}
+
+.genre span {
+  color: var(--text-color);
+}
+
+.sinopse {
+  color: var(--text-color);
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+  position: relative;
+  left: 4rem;
+  opacity: 0;
+  animation: fadeInItemsWithOpacity 0.5s cubic-bezier(0.39, 0.575, 0.565, 1)
+    1.5s forwards;
+}
+
+.description-buttons {
+  display: flex;
+  gap: 1rem;
+  position: relative;
+  left: -4rem;
+  opacity: 0;
+  animation: fadeInItem 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s forwards;
+}
+
+.description-buttons button {
+  font-size: 1rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.description-buttons button:nth-of-type(1) {
+  color: var(--text-color);
+  background-size: 100%;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+}
+
+.description-buttons button:nth-of-type(1):hover {
+  background-size: 200%;
+}
+
+.description-buttons button:nth-of-type(2) {
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  opacity: 0.7;
+}
+
+.description-buttons button:nth-of-type(2):hover {
+  opacity: 1;
+}
+
+.description-buttons button:nth-of-type(3) {
+  color: var(--text-color);
+  opacity: 0.7;
+  border: 1px solid transparent;
+}
+
+.description-buttons button:nth-of-type(3):hover {
+  opacity: 1;
+  border-color: var(--text-color);
+}
+
+.stars {
+  margin-top: 1rem;
+  position: relative;
+  top: 4rem;
+  opacity: 0;
+  animation: fadeInItem 0.5s cubic-bezier(0.39, 0.575, 0.565, 1) 1.5s forwards;
+}
+
+.stars i {
+  font-size: 1.25rem;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.stars span {
+  color: var(--text-color);
+}
+
+@keyframes fadeInItem {
+  to {
+    top: 0;
+    left: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInItemsWithOpacity {
+  to {
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+  }
+}
+
+/*--------SWIPER-SLIDE--------------------------------*/
+.swiper-mobile {
+  display: none;
+}
+
+.swiper-slide {
+  height: 12rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.8), transparent);
+}
+
+.swiper-slide span {
+  position: relative;
+  color: var(--text-color);
+  z-index: 1;
+  opacity: 0.8;
+  font-size: 0.85rem;
+}
+
+.swiper {
+  width: 30rem;
+  margin: 0;
+}
+
+.navgation-button {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.button-prev,
+.button-next {
+  width: 2.5rem;
+  height: 2.5rem;
+  clip-path: circle();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.button-prev {
+  background-color: var(--text-color);
+  color: #000;
+}
+
+.button-next {
+  background-size: 100%;
+  background-image: linear-gradient(
+    120deg,
+    var(--base-color-second),
+    var(--base-color)
+  );
+  color: var(--text-color);
+  transition: 0.5s;
+}
+
+.button-next:hover {
+  background-size: 200%;
+}
+
+/*--------RESPONSIVE--------------------------------*/
+@media screen and (max-width: 1280px) {
+  /*--------HEADER--------------------------------*/
+  .menu-links ul {
+    gap: 2rem;
+  }
+
+  .menu-login ul {
+    gap: 0.85rem;
+  }
+
+  .menu-login button {
+    font-size: 0.85rem;
+  }
+
+  li.search input {
+    max-width: 8rem;
+    left: -8rem;
+    font-size: 0.85rem;
+  }
+
+  /*--------MAIN--------------------------------*/
+  main > .container {
+    padding: 1rem 2%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  /*--------HEADER--------------------------------*/
+  .menu-links,
+  .menu-login {
+    display: none;
+  }
+
+  .menu-mobile {
+    display: block;
+  }
+
+  li.search input {
+    transform: scaleX(1);
+    position: relative;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  li.search button {
+    background: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  /*--------DESCRIPTION--------------------------------*/
+  .description-buttons {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /*--------HEADER--------------------------------*/
+  header {
+    padding: 1rem 0;
+  }
+
+  /*--------MAIN--------------------------------*/
+  main > .container {
+    flex-wrap: wrap;
+    padding: 25rem 2% 0;
+  }
+
+  .overlay {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent);
+  }
+
+  /*--------SWIPER--------------------------------*/
+  .swiper {
+    margin: 0 auto;
+    padding-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  /*--------HEADER--------------------------------*/
+  .menu-mobile ul {
+    max-width: 100%;
+  }
+
+  /*--------DESCRIPTION--------------------------------*/
+  .description-single h1 {
+    font-size: 2rem;
+  }
+
+  .description-buttons button {
+    width: 100%;
+  }
+
+  .genre {
+    flex-wrap: wrap;
+  }
+}

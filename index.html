@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <meta name="author" content="Eric Gabriel - TwGoblin" />
+
+    <title>
+      Netflix Brasil - assistir a séries online, assistir a filmes online
+    </title>
+
+    <!--Icon-->
+    <link rel="shortcut icon" type="image-x/png" href="./favicon.ico" />
+
+    <!--Swiper-->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+
+    <!--Font-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icones-->
+    <link rel="stylesheet" href="./assets/fonts/style.css" />
+
+    <!--Css-->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <div class="overlay-loading">
+      <img src="./assets/images/icon.svg" alt="Ícone Netflix" title="Netflix" />
+      <span></span>
+    </div>
+    <!--overlay-loading-->
+
+    <header>
+      <div class="container">
+        <nav class="menu-links">
+          <ul>
+            <li><a href="#" class="active">Explorar</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Documentários</a></li>
+          </ul>
+        </nav>
+        <!--menu-links-->
+
+        <a href="#" class="logo">
+          <img
+            src="./assets/images/logo.svg"
+            alt="Logo netflix"
+            title="Logo Netflix"
+          />
+        </a>
+        <!--logo-->
+
+        <nav class="menu-login">
+          <ul>
+            <li class="search">
+              <input type="search" />
+              <button id="btn-search" type="submit">
+                <i class="icon-search"></i>
+              </button>
+            </li>
+            <li><button class="btn">Log in</button></li>
+            <li><button class="btn sign-up">Sign up</button></li>
+          </ul>
+        </nav>
+        <!--menu-login-->
+
+        <nav class="menu-mobile">
+          <i class="icon-menu"></i>
+          <ul>
+            <li><i class="icon-close"></i></li>
+            <li class="search">
+              <input type="search" />
+              <button type="submit">
+                <i class="icon-search"></i>
+              </button>
+            </li>
+            <li><a href="#">Explorar</a></li>
+            <li><a href="#">Filmes</a></li>
+            <li><a href="#">Documentários</a></li>
+            <li><button class="btn">Log in</button></li>
+            <li><button class="btn sign-up">Sign up</button></li>
+          </ul>
+        </nav>
+        <!--menu-mobile-->
+      </div>
+      <!--container-->
+    </header>
+
+    <main>
+      <div class="overlay"></div>
+      <div
+        class="bg-home"
+        style="background-image: url(./assets/images/gangs-of-london.jpg)"
+      ></div>
+      <div
+        class="bg-home"
+        style="background-image: url(./assets/images/breaking-bad.jpg)"
+      ></div>
+      <div
+        class="bg-home"
+        style="background-image: url(./assets/images/vikings.jpg)"
+      ></div>
+      <div
+        class="bg-home"
+        style="background-image: url(./assets/images/homem-das-castanhas.jpg)"
+      ></div>
+      <div
+        class="bg-home"
+        style="background-image: url(./assets/images/the-blacklist.jpg)"
+      ></div>
+
+      <div class="container">
+        <div class="description">
+          <div class="description-single">
+            <h1>Gangs of London</h1>
+            <div class="genre">
+              <span>Drama</span>
+              <span>Suspense</span>
+              <span>Duração: 60 minutos</span>
+            </div>
+            <!--genre-->
+            <p class="sinopse">
+              A cidade de Londres está sendo dilacerada pelas turbulentas lutas
+              por poder das gangues internacionais que a controlam, e pelo
+              súbito vácuo de poder criado quando o chefe da mais poderosa
+              família do crime de Londres é assassinado.
+            </p>
+            <!--sinopse-->
+            <div class="description-buttons">
+              <button class="btn">Assistir série</button>
+              <button class="btn">Informações</button>
+              <button class="btn"><i class="icon-plus"></i> Minha lista</button>
+            </div>
+            <!--description-buttons-->
+
+            <div class="stars">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-half"></i>
+              <i class="icon-star-empty"></i>
+              <span>3.5</span>
+            </div>
+            <!--stars-->
+          </div>
+          <!--description-single-->
+
+          <div class="description-single">
+            <h1>Breaking Bad</h1>
+            <div class="genre">
+              <span>Drama</span>
+              <span>Duração: 42 minutos</span>
+            </div>
+            <!--genre-->
+            <p class="sinopse">
+              Ao saber que tem câncer, um professor passa a fabricar
+              metanfetamina pelo futuro da família, mudando o destino de todos.
+            </p>
+            <!--sinopse-->
+            <div class="description-buttons">
+              <button class="btn">Assistir série</button>
+              <button class="btn">Informações</button>
+              <button class="btn"><i class="icon-plus"></i> Minha lista</button>
+            </div>
+            <!--description-buttons-->
+
+            <div class="stars">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-half"></i>
+              <span>4.8</span>
+            </div>
+            <!--stars-->
+          </div>
+          <!--description-single-->
+
+          <div class="description-single">
+            <h1>Vikings</h1>
+            <div class="genre">
+              <span>Aventura</span>
+              <span>Drama</span>
+              <span>histórico</span>
+              <span>Duração: 52 minutos</span>
+            </div>
+            <!--genre-->
+            <p class="sinopse">
+              Esta série dramática acompanha a vida do viking Ragnar Lothbrok em
+              sua jornada para ampliar o domínio nórdico e desafiar um líder
+              incompetente e sem visão.
+            </p>
+            <!--sinopse-->
+            <div class="description-buttons">
+              <button class="btn">Assistir série</button>
+              <button class="btn">Informações</button>
+              <button class="btn"><i class="icon-plus"></i> Minha lista</button>
+            </div>
+            <!--description-buttons-->
+
+            <div class="stars">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-half"></i>
+              <span>4.7</span>
+            </div>
+            <!--stars-->
+          </div>
+          <!--description-single-->
+
+          <div class="description-single">
+            <h1>Homem das Castanhas</h1>
+            <div class="genre">
+              <span>Policial</span>
+              <span>Suspense</span>
+              <span>Duração: 50 minutos</span>
+            </div>
+            <!--genre-->
+            <p class="sinopse">
+              Um boneco feito com castanhas é encontrado na cena de um crime e
+              leva dois detetives a caçar um assassino ligado ao desaparecimento
+              de uma criança.
+            </p>
+            <!--sinopse-->
+            <div class="description-buttons">
+              <button class="btn">Assistir série</button>
+              <button class="btn">Informações</button>
+              <button class="btn"><i class="icon-plus"></i> Minha lista</button>
+            </div>
+            <!--description-buttons-->
+
+            <div class="stars">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-half"></i>
+              <i class="icon-star-empty"></i>
+              <span>3.8</span>
+            </div>
+            <!--stars-->
+          </div>
+          <!--description-single-->
+
+          <div class="description-single">
+            <h1>The blacklist</h1>
+            <div class="genre">
+              <span>Drama</span>
+              <span>Policial</span>
+              <span>Suspense</span>
+              <span>Duração: 42 minutos</span>
+            </div>
+            <!--genre-->
+            <p class="sinopse">
+              Após se entregar à polícia, um brilhante fugitivo oferece ajuda ao
+              FBI, mas apenas se a novata Elizabeth Keen for sua parceira.
+            </p>
+            <!--sinopse-->
+            <div class="description-buttons">
+              <button class="btn">Assistir série</button>
+              <button class="btn">Informações</button>
+              <button class="btn"><i class="icon-plus"></i> Minha lista</button>
+            </div>
+            <!--description-buttons-->
+
+            <div class="stars">
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-full"></i>
+              <i class="icon-star-half"></i>
+              <span>4.7</span>
+            </div>
+            <!--stars-->
+          </div>
+          <!--description-single-->
+        </div>
+        <!--description-->
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url('./assets/images/gangs-of-london.jpg');
+              "
+            >
+              <span>Gangs of London</span>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('./assets/images/breaking-bad.jpg')"
+            >
+              <span>Breaking bad</span>
+            </div>
+
+            <div
+              class="swiper-slide"
+              style="background-image: url('./assets/images/vikings.jpg')"
+            >
+              <span>Vkings</span>
+            </div>
+            <div
+              class="swiper-slide"
+              style="
+                background-image: url('./assets/images/homem-das-castanhas.jpg');
+              "
+            >
+              <span>Homem das castanhas</span>
+            </div>
+            <div
+              class="swiper-slide"
+              style="background-image: url('./assets/images/the-blacklist.jpg')"
+            >
+              <span>The Blacklist</span>
+            </div>
+          </div>
+          <!--swiper-wrapper-->
+
+          <div class="navgation-button">
+            <div class="button-prev"><i class="icon-arrow-left"></i></div>
+            <div class="button-next"><i class="icon-arrow-right"></i></div>
+          </div>
+          <!--navgation-button-->
+        </div>
+      </div>
+      <!--container-->
+    </main>
+
+    <!--Loading-->
+    <script src="./assets/js/loading.js"></script>
+
+    <!--swiper-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!--Js-->
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
