@@ -235,7 +235,7 @@ li.search input {
 }
 
 /*--------MENU-MOBILE--------------------------------*/
-.menu-mobile {
+.menu-mobile, .menu-mobile .icon-menu{
   display: none;
 }
 
@@ -257,9 +257,11 @@ li.search input {
   visibility: hidden;
   opacity: 0;
   animation: hideMenuMobile 0.5s ease-in-out forwards;
+  display: none;
 }
 
 ul.show-menu-mobile {
+  display: block;
   animation: showMenuMobile 0.5s ease-in-out forwards;
 }
 
@@ -638,7 +640,8 @@ main > .container {
     display: none;
   }
 
-  .menu-mobile {
+  .menu-mobile, .menu-mobile .icon-menu{
+    display: block;
   }
 
   li.search input {
