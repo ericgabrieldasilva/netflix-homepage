@@ -79,13 +79,30 @@
         <nav class="menu-login">
           <ul>
             <li class="search">
-              <input type="search" />
-              <button id="btn-search" type="submit">
+              <input type="search" aria-labelledby="Pesquisar" />
+              <button
+                id="btn-search"
+                type="submit"
+                aria-label="Pesquisar"
+                title="Pesquisar"
+              >
                 <i class="icon-search"></i>
               </button>
             </li>
-            <li><button class="btn">Log in</button></li>
-            <li><button class="btn sign-up">Sign up</button></li>
+            <li>
+              <button class="btn" aria-label="Entrar" title="Entrar">
+                Log in
+              </button>
+            </li>
+            <li>
+              <button
+                class="btn sign-up"
+                aria-label="Cadastrar"
+                title="Cadastrar"
+              >
+                Sign up
+              </button>
+            </li>
           </ul>
         </nav>
         <!--menu-login-->
