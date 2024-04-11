@@ -7,7 +7,7 @@
   list-style: none;
   text-decoration: none;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 /*---------VARIABLES----------------------------------*/
@@ -156,7 +156,7 @@ a.active {
 }
 
 .menu-links a::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: -0.5rem;
@@ -353,7 +353,7 @@ main {
 
 .overlay::before,
 .overlay::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   height: 100%;
@@ -543,7 +543,7 @@ main > .container {
 }
 
 .swiper-slide::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -639,7 +639,6 @@ main > .container {
   }
 
   .menu-mobile {
-    display: block;
   }
 
   li.search input {
