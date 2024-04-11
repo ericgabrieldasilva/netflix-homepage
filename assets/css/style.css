@@ -235,7 +235,8 @@ li.search input {
 }
 
 /*--------MENU-MOBILE--------------------------------*/
-.menu-mobile, .menu-mobile .icon-menu{
+.menu-mobile,
+.menu-mobile .icon-menu {
   display: none;
 }
 
@@ -640,7 +641,8 @@ main > .container {
     display: none;
   }
 
-  .menu-mobile, .menu-mobile .icon-menu{
+  .menu-mobile,
+  .menu-mobile .icon-menu {
     display: block;
   }
 
@@ -705,5 +707,10 @@ main > .container {
 
   .genre {
     flex-wrap: wrap;
+  }
+
+  /*--------MAIN--------------------------------*/
+  .bg-home {
+    background-image: url("../images/gangs-of-london-mobile.jpg");
   }
 }
