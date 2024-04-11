@@ -1,5 +1,3 @@
-getSlideIndex()
-
 const swiper = new Swiper(".swiper", {
   slidesPerView: 2,
   spaceBetween: 16,
@@ -21,6 +19,8 @@ const swiper = new Swiper(".swiper", {
     },
   },
 })
+
+getSlideIndex()
 openAndCloseInputSearch()
 openAndCloseMenuMobile()
 
