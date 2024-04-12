@@ -333,8 +333,7 @@ main {
 .show {
   visibility: visible;
   opacity: 1;
-  top: -20rem;
-  opacity: 0;
+  /*top: -20rem;*/
   /*animation: fadeInItem 1s ease-in-out forwards;*/
 }
 
