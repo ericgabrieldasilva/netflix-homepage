@@ -512,6 +512,7 @@ main > .container {
   color: var(--text-color);
 }
 
+/*
 @keyframes fadeInItem {
   to {
     top: 0;
@@ -527,7 +528,7 @@ main > .container {
     opacity: 0.6;
   }
 }
-
+*/
 /*--------SWIPER-SLIDE--------------------------------*/
 .swiper-mobile {
   display: none;
@@ -711,6 +712,6 @@ main > .container {
 
   /*--------MAIN--------------------------------*/
   .bg-home {
-    background-image: url("../images/gangs-of-london-mobile.jpg")!important;
+    background-image: url("../images/gangs-of-london-mobile.jpg") !important;
   }
 }
