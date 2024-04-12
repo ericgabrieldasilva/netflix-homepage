@@ -711,7 +711,6 @@ main > .container {
 
   /*--------MAIN--------------------------------*/
   .bg-home {
-    background-image: url("../images/gangs-of-london-mobile.jpg") !important;
-    height: 800px;
+    background-image: url("../images/gangs-of-london-mobile.jpg")!important;
   }
 }
